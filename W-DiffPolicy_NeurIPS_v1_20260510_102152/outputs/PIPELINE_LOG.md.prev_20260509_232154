@@ -1,0 +1,18 @@
+# Pipeline 自治决策日志
+
+**研究方向**: SAEPro - Online Probing of Sparse Features for Reward Hacking Detection in RL Training
+**Venue**: ICLR
+**起始时间**: 2026-05-09
+**REVIEWER_MODEL**: gpt-5.5
+**REFINE_TOP_N**: 2
+**参考设计**: /Users/zpy/LLM_project/idea_paper/boardSearch/outputs/archive_2026-05-09_saepro-iclr_done/DIRECTION_REPORT.md
+
+---
+
+## [2026-05-09] Pipeline 启动
+
+- 检测到无现存 PIPELINE_STATE.json，全新执行
+- 已读取参考设计 DIRECTION_REPORT.md 作为种子背景
+- 决策：直接进入 Phase 1（lit-survey）
+
+---

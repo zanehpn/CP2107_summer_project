@@ -1,0 +1,19 @@
+Pipeline 全自动执行完毕。所有输出文件已生成。
+
+## 总结
+
+完成 W-DiffPolicy 完整 idea-pipeline，目标 NeurIPS 2026：
+
+**4 阶段执行**：
+- **Phase 1 lit-survey**: 29 篇论文，6 主题，12 gap（4 个 HIGH-confidence）
+- **Phase 2 idea-gen**: 13 critique → 11 ideas → top 6 通过 He filter
+- **Phase 3 idea-screen**: top 4 多维度审，2 PROCEED + 2 CAUTION
+- **Phase 4 idea-refine**: IDEA-01 主论文 3 轮 7.45→7.71→7.93 + IDEA-10 sibling 1 轮 condensed
+
+**核心产出**：
+1. **IDEA-01 (主论文)**: Mode-Conditional W-DiffPolicy — chunk diffusion + frozen mode classifier + per-mode ICNN-W₂ + balanced valid (s,z) sampler + receding-horizon + N_eff-aware finite-sample mode-recall theorem。最终 7.93/10 (REVISE)，剩余差距在 paper 写作阶段补强。
+2. **IDEA-10 (sibling theory paper)**: KL-Mode Collapse Threshold Law in Continuous Control — 推导 KL closed-form mass allocation + W₂ bang-bang threshold + regime map 给出 P19 LM 推到 control 的适用边界。
+
+**关键 pipeline 发现**: OTPR (2502.12631) 在 idea-screen 阶段被发现是 Q-cost OT for diffusion (online RL) 的 incumbent，倒逼 IDEA-01 把 novelty 重心从 "Q-cost OT" 移到 mode-preservation。
+
+**所有文件**: `outputs/IDEA_DISCOVERY_REPORT.md` 是 final aggregated report；完整 trace 在 `outputs/PIPELINE_LOG.md` 与 `refine-logs/`。

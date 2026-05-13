@@ -1,0 +1,574 @@
+{
+  "topic": "W-DiffPolicy: Wasserstein-Regularized Diffusion Policies for Multi-Modal Offline Reinforcement Learning",
+  "date": "2026-05-09",
+  "venue": "NeurIPS 2026",
+  "paper_count": 29,
+  "sources_used": ["web", "arxiv", "openreview", "boardSearch_archive"],
+  "papers": [
+    {
+      "id": "P01",
+      "title": "Diffusion Policies as an Expressive Policy Class for Offline Reinforcement Learning (Diffusion-QL)",
+      "authors": ["Wang Z.", "Hunt J. J.", "Zhou M."],
+      "year": 2023,
+      "venue": "ICLR 2023",
+      "method": "KL-regularized diffusion policy + Q-guided sampling",
+      "key_result": "首篇将 diffusion 用于 offline RL；D4RL SOTA",
+      "relevance": "直接 baseline + 主要竞品 (KL 正则)",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2208.06193",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P02",
+      "title": "Efficient Diffusion Policies (EDP)",
+      "authors": ["Kang B.", "et al."],
+      "year": 2023,
+      "venue": "NeurIPS 2023",
+      "method": "Action approximation + 兼容 TD3/CRR/IQL",
+      "key_result": "训练 5d→5h，多算法兼容",
+      "relevance": "baseline；训练加速可借鉴",
+      "source": "web",
+      "url": "",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P03",
+      "title": "SORL: Scaling Offline RL via Efficient and Expressive Shortcut Models",
+      "authors": ["Espinosa-Dice N.", "et al."],
+      "year": 2025,
+      "venue": "NeurIPS 2025",
+      "method": "Shortcut models + Q-verifier 推理时间扩展",
+      "key_result": "antmaze-large/antsoccer SOTA；one-step inference",
+      "relevance": "当前 diffusion-family SOTA baseline",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2505.22866",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P04",
+      "title": "Behavior-Regularized Diffusion Policy Optimization (BDPO)",
+      "authors": ["Gao C.-X.", "Wu C.", "Cao M.", "Xiao C.", "Yu Y.", "Zhang Z."],
+      "year": 2025,
+      "venue": "ICML 2025",
+      "method": "KL 解析地按 reverse-time transition kernel 累加",
+      "key_result": "D4RL 全套 SOTA on diffusion",
+      "relevance": "直接竞品 (KL 严格化路线)；W-DiffPolicy 是 W₂ 替代版",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2502.04778",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P05",
+      "title": "ReFORM: Reflected Flows for On-Support Offline RL",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "OpenReview",
+      "method": "Reflected flow 保证 on-support",
+      "key_result": "flow-based offline RL 改进",
+      "relevance": "flow 路线对照",
+      "source": "boardSearch",
+      "url": "",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P06",
+      "title": "RACTD: Accelerating Diffusion Planners in Offline RL via Reward-Aware Consistency Trajectory Distillation",
+      "authors": ["Daza et al. (CMU)"],
+      "year": 2025,
+      "venue": "arXiv 2506.07822",
+      "method": "Reward-aware consistency distillation；teacher-student-reward 三模型解耦",
+      "key_result": "+8.7% over SOTA, 142× speedup, 1-NFE",
+      "relevance": "推理加速威胁；与 W-正则正交，可叠加",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2506.07822",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P07",
+      "title": "Mixed-Density Diffuser: Efficient Planning with Non-Uniform Temporal Resolution",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "arXiv 2510.23026",
+      "method": "非均匀时序分辨率 + planning",
+      "key_result": "Maze2D/Kitchen/AntMaze SOTA",
+      "relevance": "planning-based diffusion 对照",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2510.23026",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P08",
+      "title": "One-Step Flow Q-Learning",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "arXiv 2508.13904",
+      "method": "单步 flow 解决 diffusion bottleneck",
+      "key_result": "offline RL 训练加速",
+      "relevance": "推理加速对照",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2508.13904",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P09",
+      "title": "DreamFuser: Value-Guided Diffusion Policy",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "OpenReview",
+      "method": "Value-guided sampling for diffusion policy",
+      "key_result": "diffusion offline RL 改进",
+      "relevance": "同期路线对照",
+      "source": "web",
+      "url": "https://openreview.net/pdf?id=9jmUwjZi7j",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P10",
+      "title": "Diffusion Policies with Value-Conditional Optimization for Offline RL",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "arXiv 2511.08922",
+      "method": "Value-conditional diffusion",
+      "key_result": "offline RL 改进",
+      "relevance": "同期路线",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2511.08922",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P11",
+      "title": "Decision Flow Policy Optimization",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "arXiv 2505.20350",
+      "method": "Flow-based decision policy",
+      "key_result": "online + offline 双场景",
+      "relevance": "flow 路线对照",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2505.20350",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P12",
+      "title": "Entropy-Regularized Diffusion Policy with Q-Ensembles for Offline RL",
+      "authors": ["Anonymous"],
+      "year": 2024,
+      "venue": "arXiv 2402.04080",
+      "method": "Entropy reg + Q-ensembles",
+      "key_result": "offline RL 改进",
+      "relevance": "熵正则 vs Wasserstein 对照",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2402.04080",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P13",
+      "title": "Adaptive Diffusion Policy Optimization for Robotic Manipulation",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "arXiv 2505.08376",
+      "method": "自适应 diffusion 步长",
+      "key_result": "robotic manipulation 改进",
+      "relevance": "工程优化对照",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2505.08376",
+      "themes": ["Diffusion Policy for Offline RL"]
+    },
+    {
+      "id": "P14",
+      "title": "Q-DOT: Offline RL with Wasserstein Regularization via Optimal Transport Maps",
+      "authors": ["Omura M.", "et al."],
+      "year": 2025,
+      "venue": "RLC 2025 / RLJ",
+      "method": "ICNN-based discriminator-free OT map; Brenier 定理",
+      "key_result": "hopper-medium-v2 +10.4, kitchen-partial-v0 +21.5 vs IQL baselines",
+      "relevance": "核心威胁：W₂+ICNN+IQL；启发本提案的 ICNN 设计；技术基底相同",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2507.10843",
+      "themes": ["OT Regularization in Offline RL"]
+    },
+    {
+      "id": "P15",
+      "title": "Expert or Not? Assessing Data Quality in Offline RL (BWD-IQL)",
+      "authors": ["Anonymous"],
+      "year": 2026,
+      "venue": "ICLR 2026",
+      "method": "Bellman-Wasserstein Distance 作为数据质量诊断 + IQL 训练正则",
+      "key_result": "BWD 与 oracle score 高度相关；IQL+BWD 提升",
+      "relevance": "核心相关：W-OT for IQL；W-DiffPolicy 是 diffusion 版扩展",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2510.12638",
+      "themes": ["OT Regularization in Offline RL"]
+    },
+    {
+      "id": "P16",
+      "title": "Rethinking Optimal Transport in Offline Reinforcement Learning",
+      "authors": ["Anonymous"],
+      "year": 2024,
+      "venue": "NeurIPS 2024",
+      "method": "Q-function as transport cost; policy as OT map; Maximin OT formulation",
+      "key_result": "D4RL 改进；OT 视角统一 offline RL",
+      "relevance": "理论基底：OT 视角看 offline RL",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2410.14069",
+      "themes": ["OT Regularization in Offline RL"]
+    },
+    {
+      "id": "P17",
+      "title": "SWFP: Iterative Refinement of Flow Policies in Probability Space for Online RL",
+      "authors": ["Sun M.", "et al."],
+      "year": 2025,
+      "venue": "arXiv 2510.15388 (Oct 2025)",
+      "method": "JKO 离散化 + W₂ Trust Region for flow policy；Stepwise JKO Iteration",
+      "key_result": "online robotic control 上稳定性 + 适应性 SOTA",
+      "relevance": "直接关联：W₂ + flow + JKO；与 W-DiffPolicy 在 online 上对应；offline 留白",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2510.15388",
+      "themes": ["OT Regularization in Offline RL"]
+    },
+    {
+      "id": "P18",
+      "title": "Online Reward-Weighted Fine-Tuning of Flow Matching with Wasserstein Regularization",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "arXiv 2502.06061",
+      "method": "W₂ 微调 flow matching",
+      "key_result": "online generative 设定下改进",
+      "relevance": "OT + flow 路线参考",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2502.06061",
+      "themes": ["OT Regularization in Offline RL"]
+    },
+    {
+      "id": "P19",
+      "title": "KL-Regularized Reinforcement Learning is Designed to Mode Collapse",
+      "authors": ["GX-Chen", "Prakash", "et al."],
+      "year": 2025,
+      "venue": "arXiv 2510.20817 (Oct 2025)",
+      "method": "形式化定理：reverse/forward KL 正则下 mode-collapse 不可避免；reward 调整算法",
+      "key_result": "LLM/化学语言模型实验验证 mode-collapse 与多样性提升",
+      "relevance": "核心理论支撑：KL bad → 需 W₂ alternative；可推广到 control",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2510.20817",
+      "themes": ["Multi-modality Theory & Diagnostics"]
+    },
+    {
+      "id": "P20",
+      "title": "Learning on One Mode: Addressing Multi-Modality in Offline RL (LOM)",
+      "authors": ["Wang M.", "Jin Y.", "Montana G."],
+      "year": 2025,
+      "venue": "ICLR 2025",
+      "method": "GMM 识别 mode + 选择 best mode 加权模仿",
+      "key_result": "D4RL 多模态场景下改进",
+      "relevance": "多模态 RL 的非-OT 路线对照（放弃保留 vs OT 保留）",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2412.03258",
+      "themes": ["Multi-modality Theory & Diagnostics"]
+    },
+    {
+      "id": "P21",
+      "title": "RAMAC: Multimodal Risk-Aware Offline RL and the Role of Behavior Regularization",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "arXiv 2510.02695",
+      "method": "Multi-modal 风险感知 + 行为正则",
+      "key_result": "offline RL 风险约束改进",
+      "relevance": "多模态 + 正则化对照",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2510.02695",
+      "themes": ["Multi-modality Theory & Diagnostics"]
+    },
+    {
+      "id": "P22",
+      "title": "Optimal Transport Mapping via Input Convex Neural Networks (ICNN-OT)",
+      "authors": ["Makkuva A.", "Taghvaei A.", "Lee J.", "Oh S."],
+      "year": 2020,
+      "venue": "ICML 2020 / arXiv 1908.10962",
+      "method": "ICNN 学 Brenier convex potential 的梯度作为 OT map",
+      "key_result": "通用 OT mapping 工具",
+      "relevance": "理论基底：Q-DOT 与 W-DiffPolicy 共用基础",
+      "source": "web",
+      "url": "https://arxiv.org/abs/1908.10962",
+      "themes": ["ICNN / OT Theory"]
+    },
+    {
+      "id": "P23",
+      "title": "PUORL: Offline RL with Domain-Unlabeled Data",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "RLC 2025",
+      "method": "PU learning + cross-domain offline RL",
+      "key_result": "1-3% domain labels 下 SOTA",
+      "relevance": "cross-domain offline RL benchmark",
+      "source": "boardSearch",
+      "url": "https://rlj.cs.umass.edu/2025/papers/RLJ_RLC_2025_189.pdf",
+      "themes": ["Cross-Domain Offline RL & Real-World Benchmarks"]
+    },
+    {
+      "id": "P24",
+      "title": "Cross-Domain Offline Policy Adaptation with Optimal Transport and Dataset Constraint (OTDF)",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "ICLR 2025",
+      "method": "Transition-level OT alignment + selective sharing",
+      "key_result": "跨 dynamics shift 下 SOTA",
+      "relevance": "cross-domain OT 对照（transition-level vs action-level OT）",
+      "source": "web",
+      "url": "https://openreview.net/forum?id=LRrbD8EZJl",
+      "themes": ["Cross-Domain Offline RL & Real-World Benchmarks"]
+    },
+    {
+      "id": "P25",
+      "title": "Dual-Robust Cross-Domain Offline RL Against Dynamics Shifts",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "arXiv 2512.02486",
+      "method": "Performance bound + dual robustness",
+      "key_result": "cross-domain SOTA",
+      "relevance": "同期 cross-domain",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2512.02486",
+      "themes": ["Cross-Domain Offline RL & Real-World Benchmarks"]
+    },
+    {
+      "id": "P26",
+      "title": "Beyond OOD State-Actions: Supported Cross-Domain Offline RL",
+      "authors": ["Anonymous"],
+      "year": 2025,
+      "venue": "AAAI",
+      "method": "Support-based cross-domain",
+      "key_result": "OOD 分析改进",
+      "relevance": "cross-domain 对照",
+      "source": "boardSearch",
+      "url": "",
+      "themes": ["Cross-Domain Offline RL & Real-World Benchmarks"]
+    },
+    {
+      "id": "P27",
+      "title": "NeoRL-2: Near Real-World Benchmarks for Offline RL",
+      "authors": ["Liu et al. (Polixir)"],
+      "year": 2025,
+      "venue": "arXiv 2503.19267",
+      "method": "7 个真实场景 task；conservative dataset；delayed action effects",
+      "key_result": "SOTA offline RL 仍超不过 behavior policy；揭示真实场景下 offline RL 局限",
+      "relevance": "核心 benchmark 之一；W-DiffPolicy zero-shot 转 NeoRL-2 是天然实验",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2503.19267",
+      "themes": ["Cross-Domain Offline RL & Real-World Benchmarks"]
+    },
+    {
+      "id": "P28",
+      "title": "Distributional RL by Sinkhorn Divergence",
+      "authors": ["Anonymous"],
+      "year": 2024,
+      "venue": "arXiv 2202.00769",
+      "method": "Sinkhorn divergence for distributional RL",
+      "key_result": "distributional RL 改进",
+      "relevance": "Sinkhorn 路线参考；W-DiffPolicy 可选 ablation 维度",
+      "source": "web",
+      "url": "https://arxiv.org/abs/2202.00769",
+      "themes": ["Distributional RL & Sinkhorn"]
+    },
+    {
+      "id": "P29",
+      "title": "Distribution Shift / Generalization / OOD in Offline RL Survey",
+      "authors": ["Anonymous"],
+      "year": 2026,
+      "venue": "Neural Computing & Applications 2026",
+      "method": "Survey",
+      "key_result": "OOD 综合视角",
+      "relevance": "综述参考",
+      "source": "boardSearch",
+      "url": "",
+      "themes": ["Distributional RL & Sinkhorn"]
+    }
+  ],
+  "themes": [
+    {
+      "name": "Diffusion Policy for Offline RL",
+      "papers": ["P01", "P02", "P03", "P04", "P05", "P06", "P07", "P08", "P09", "P10", "P11", "P12", "P13"],
+      "status": "active",
+      "dominant_approach": "Score-based diffusion policy + Q-learning + 行为正则 (KL or BC loss)",
+      "summary": "主线脉络：Diffusion-QL 奠定多模态 expressive policy class，BDPO 严格化 KL，SORL 用 shortcut models scale。但**所有方法都用 KL 或 BC loss 作为行为正则**，没有任何 diffusion policy 工作使用 W₂-OT 正则。"
+    },
+    {
+      "name": "OT Regularization in Offline RL",
+      "papers": ["P14", "P15", "P16", "P17", "P18"],
+      "status": "emerging",
+      "dominant_approach": "W₂ via ICNN (Q-DOT) 或 value-aware OT (BWD-IQL) 或 Maximin OT",
+      "summary": "Q-DOT (RLC 2025) 是关键节点：ICNN-based discriminator-free OT map 在 IQL 上大幅领先；SWFP (Oct 2025) 把 W₂ JKO 接到 online flow policy；但 **diffusion policy training-time OT 正则是空白**。"
+    },
+    {
+      "name": "Multi-modality Theory & Diagnostics",
+      "papers": ["P19", "P20", "P21"],
+      "status": "emerging",
+      "dominant_approach": "GMM 识别 mode (LOM)；KL collapse 定理 (P19)；mode-aware 风险正则 (RAMAC)",
+      "summary": "P19 (Oct 2025) 在 LLM RL 上首次形式化证明 KL 正则的 mode-collapse 不可避免，但未推到 control；**没有任何工作给出 OT 正则的 mode-preservation 定理**。"
+    },
+    {
+      "name": "ICNN / OT Theory",
+      "papers": ["P22", "P14", "P17"],
+      "status": "mature",
+      "dominant_approach": "ICNN 学 Brenier convex potential 的梯度作为 OT map",
+      "summary": "Makkuva 2020 奠基；Q-DOT 与 SWFP 引到 RL；技术成熟，主要工程问题是 ICNN 训练速度。"
+    },
+    {
+      "name": "Cross-Domain Offline RL & Real-World Benchmarks",
+      "papers": ["P23", "P24", "P25", "P26", "P27"],
+      "status": "active",
+      "dominant_approach": "PU learning、OT alignment (transition-level)、support-based",
+      "summary": "OTDF 用 transition-level OT 做 cross-domain dataset filter；NeoRL-2 报告 SOTA 仍超不过 behavior。**cross-domain OT 与 multi-modal diffusion policy 没有结合工作**。"
+    },
+    {
+      "name": "Distributional RL & Sinkhorn",
+      "papers": ["P28", "P29"],
+      "status": "mature",
+      "dominant_approach": "Sinkhorn divergence for value distribution",
+      "summary": "Sinkhorn 在 distributional RL 上有探索；**作为 offline RL 行为正则的 Sinkhorn 是空白**。"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G1",
+      "description": "Wasserstein OT 正则尚未应用于 diffusion policy 训练。W₂-via-ICNN 已在 IQL (P14) 和 online flow (P17) 上验证；KL 正则在 diffusion (P01, P04) 上严格化；但 diffusion + W₂-OT 训练时正则的交集是空白。",
+      "type": "cross-domain transfer",
+      "evidence_papers": ["P14", "P15", "P17", "P01", "P04"],
+      "confidence": "HIGH"
+    },
+    {
+      "id": "G2",
+      "description": "缺乏 OT 正则 diffusion policy 的 mode-preservation 形式化定理。P19 给出 KL 正则的 mode-collapse 定理但仅在 LLM/语言模型 setting；OT 是否能形式化保证 mode 保留也无证明。",
+      "type": "overlooked formulation",
+      "evidence_papers": ["P19", "P20", "P14"],
+      "confidence": "HIGH"
+    },
+    {
+      "id": "G3",
+      "description": "D4RL 等 multi-modal benchmark 缺少标准化 mode-coverage 量化指标。所有 diffusion 方法都口头宣称多模态保留，但没有标准 'mode count preserved / true mode count' 指标。",
+      "type": "missing diagnostic",
+      "evidence_papers": ["P01", "P02", "P04", "P20"],
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "G4",
+      "description": "RACTD-style consistency distillation 与训练时 OT 正则的正交性未验证。RACTD 加速推理但 inherit teacher 的 KL 正则；W-OT 正则的 diffusion teacher 能否被 RACTD 蒸馏成 single-step 是开放问题。",
+      "type": "resolution opportunity",
+      "evidence_papers": ["P06", "P14", "P01"],
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "G5",
+      "description": "W₂-based distribution-shift bound for diffusion policy 不存在。CQL/IQL/Diffusion-QL 的保守性分析建立在 KL 或 TV 上；P14/P15 给出 IQL 的 W-bound 启示但不直接适用于 diffusion 的 K 步 reverse process。",
+      "type": "overlooked formulation",
+      "evidence_papers": ["P01", "P04", "P14", "P15", "P16"],
+      "confidence": "HIGH"
+    },
+    {
+      "id": "G6",
+      "description": "Cross-domain offline RL 的 OT (OTDF) 与 multi-modal diffusion 未结合。OTDF 在 transition 层做 OT alignment 但不涉及 multi-modal action structure；W-DiffPolicy 天然适合 cross-domain 因为 W₂ 同时给出 source/target 距离。",
+      "type": "cross-domain transfer",
+      "evidence_papers": ["P24", "P27", "P23", "P25"],
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "G7",
+      "description": "ICNN-based OT 在高维 / 离散-连续混合 action space 的扩展性未测。Q-DOT 在 hopper/walker/kitchen 上验证；Adroit (24-dim 灵巧手) 与 hybrid action 上效果未知。",
+      "type": "scaling frontier",
+      "evidence_papers": ["P14", "P22"],
+      "confidence": "LOW"
+    },
+    {
+      "id": "G8",
+      "description": "Sinkhorn (entropic OT) 用作 diffusion policy 行为正则未探索。Sinkhorn 在 distributional RL 上用过；但作为 policy 行为正则的对比研究不存在。",
+      "type": "overlooked formulation",
+      "evidence_papers": ["P28", "P14"],
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "G9",
+      "description": "NeoRL-2 上 OT-regularized 方法的 cross-domain 迁移性能未测。NeoRL-2 报告 SOTA offline RL 仍超不过 behavior；P14/P15/P24 都未在 NeoRL-2 上验证；W-DiffPolicy zero-shot 转 NeoRL-2 是天然实验。",
+      "type": "untested assumption",
+      "evidence_papers": ["P27", "P14", "P15", "P24"],
+      "confidence": "HIGH"
+    },
+    {
+      "id": "G10",
+      "description": "「KL is Designed to Mode Collapse」(P19) 的 RL 控制实验扩展未完成。P19 在生成式 LM 上证明并实验，但未在 D4RL 控制任务上重做；W-DiffPolicy 可同时验证 KL 失效 + W 修复。",
+      "type": "resolution opportunity",
+      "evidence_papers": ["P19", "P01", "P04"],
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "G11",
+      "description": "RACTD 与 KL 正则共生的方法学风险。RACTD 占据 reward-aware consistency 路线但其 teacher 仍受 KL 正则；理论上 mode 在 distill 阶段进一步坍塌，但实验未对比 W-teacher → consistency student。",
+      "type": "untested assumption",
+      "evidence_papers": ["P06", "P19"],
+      "confidence": "LOW"
+    },
+    {
+      "id": "G12",
+      "description": "离线训练时 OT 估计不稳定的稳健化未充分研究。W₂ 在 long-horizon (T>1000) batch 中估计噪声大；P14 解决 IQL 但 diffusion 多步累积的 W 估计稳健化未做。",
+      "type": "scaling frontier",
+      "evidence_papers": ["P14", "P17"],
+      "confidence": "MEDIUM"
+    }
+  ],
+  "trajectory": {
+    "performed": true,
+    "top_authors": [
+      {
+        "name": "Motoki Omura et al.",
+        "affiliation": "U-Tokyo / Harada-Kurose-Mukoyama Lab",
+        "recent_focus": "OT regularization for offline RL；ICNN-based discriminator-free 方法",
+        "direction": "极有可能从 IQL 延伸到 diffusion policy",
+        "key_recent_papers": ["Q-DOT (P14)"]
+      },
+      {
+        "name": "Chen-Xiao Gao, Yang Yu",
+        "affiliation": "Nanjing U / 朱占星组",
+        "recent_focus": "Behavior-regularized diffusion policy；KL 严格化",
+        "direction": "可能从 KL 扩展到其他散度",
+        "key_recent_papers": ["BDPO (P04)"]
+      },
+      {
+        "name": "Mianchu Wang, Giovanni Montana",
+        "affiliation": "Warwick",
+        "recent_focus": "Multi-modality in offline RL；mode selection",
+        "direction": "从单模选择扩展到多模保留",
+        "key_recent_papers": ["LOM (P20)"]
+      }
+    ],
+    "coauthor_clusters": [
+      {
+        "label": "U-Tokyo OT-RL (Cluster A)",
+        "members": ["Omura", "Harada", "Kurose", "Mukoyama"],
+        "focus": "OT + ICNN + IQL",
+        "relationship_to_other_groups": "与 W-DiffPolicy 直接竞争 (技术基底相同)；最大 incumbent 威胁"
+      },
+      {
+        "label": "Nanjing-LAMDA Diffusion (Cluster B)",
+        "members": ["Gao", "Wu", "Cao", "Y. Yu", "Z. Zhang"],
+        "focus": "KL-strict diffusion policy",
+        "relationship_to_other_groups": "与 W-DiffPolicy 互补 (KL → W 替换)；可能合作"
+      },
+      {
+        "label": "CMU Distillation (Cluster C)",
+        "members": ["RACTD authors"],
+        "focus": "Reward-aware distillation",
+        "relationship_to_other_groups": "正交可叠加 (W-teacher + RACTD-student)"
+      },
+      {
+        "label": "Cornell SORL (Cluster D)",
+        "members": ["Espinosa-Dice", "Zhang"],
+        "focus": "Shortcut models scaling",
+        "relationship_to_other_groups": "互补 (training-time vs inference-time 优化)"
+      },
+      {
+        "label": "Polixir / NeoRL (Cluster E)",
+        "members": ["Liu et al."],
+        "focus": "Real-world benchmark",
+        "relationship_to_other_groups": "提供 evaluation testbed；W-DiffPolicy 可用作 cross-domain 检验"
+      }
+    ]
+  }
+}

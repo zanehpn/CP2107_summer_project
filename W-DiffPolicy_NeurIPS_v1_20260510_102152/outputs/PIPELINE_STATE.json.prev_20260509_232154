@@ -1,0 +1,13 @@
+{
+  "direction": "SAEPro: Online Probing of Sparse Features for Reward Hacking Detection in RL Training",
+  "venue": "ICLR",
+  "current_phase": 1,
+  "completed_phases": [],
+  "started_at": "2026-05-09T00:00:00Z",
+  "phase_timestamps": {},
+  "reference_design": "/Users/zpy/LLM_project/idea_paper/boardSearch/outputs/archive_2026-05-09_saepro-iclr_done/DIRECTION_REPORT.md",
+  "constants": {
+    "REFINE_TOP_N": 2,
+    "REVIEWER_MODEL": "gpt-5.5"
+  }
+}

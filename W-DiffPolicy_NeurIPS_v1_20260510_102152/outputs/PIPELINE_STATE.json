@@ -1,0 +1,39 @@
+{
+  "direction": "W-DiffPolicy: Wasserstein-Regularized Diffusion Policies for Multi-Modal Offline Reinforcement Learning",
+  "venue": "NeurIPS",
+  "current_phase": 5,
+  "completed_phases": ["lit-survey", "idea-gen", "idea-screen", "idea-refine-main", "idea-refine-sibling"],
+  "started_at": "2026-05-09T23:25:00Z",
+  "phase_timestamps": {
+    "lit-survey": "2026-05-09T23:35:00Z",
+    "idea-gen": "2026-05-09T23:55:00Z",
+    "idea-screen": "2026-05-10T00:15:00Z",
+    "idea-refine-main": "2026-05-10T00:55:00Z",
+    "idea-refine-sibling": "2026-05-10T01:05:00Z"
+  },
+  "reference_design": "/Users/zpy/LLM_project/idea_paper/boardSearch/outputs/archive_2026-05-09_w-diffpolicy-neurips_done/DIRECTION_REPORT_W-DiffPolicy.md",
+  "codex_thread_id": "019e0d5d-3c03-79c0-9ec5-dfe562c2f248",
+  "constants": {
+    "REFINE_TOP_N": 2,
+    "REVIEWER_MODEL": "gpt-5.5",
+    "DEFAULT_VENUE": "ICML"
+  },
+  "refined_ideas": {
+    "main": {
+      "idea_id": "IDEA-01",
+      "title": "Mode-Conditional W-DiffPolicy",
+      "rounds": 3,
+      "final_score": 7.93,
+      "verdict": "REVISE",
+      "files_root": "refine-logs/"
+    },
+    "sibling": {
+      "idea_id": "IDEA-10",
+      "title": "KL-Mode Collapse in Continuous Control: Threshold Law with W₂ Comparison",
+      "rounds": 1,
+      "initial_score": 7.05,
+      "verdict": "REVISE → fixes integrated in FINAL",
+      "files_root": "refine-logs/idea-10-sibling/"
+    }
+  }
+}

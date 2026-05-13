@@ -1,0 +1,18 @@
+{
+  "topic": "AgentRead: Diagnosing and Closing the Discovery-to-Utilization Gap in Tool-Augmented LLMs",
+  "topic_hash": "agentread-v1-2026-05-11",
+  "venue": "EMNLP",
+  "anchor_doc": "/Users/zpy/LLM_project/idea_paper/boardSearch/outputs/archive_2026-05-11_agentread-design_done/DESIGN_DOC_AgentRead.md",
+  "reviewer_model": "gpt-5.5",
+  "refine_top_n": 2,
+  "start_time": "2026-05-11T23:50:49+08:00",
+  "phases": {
+    "phase_1_lit_survey": {"status": "completed", "output": ["outputs/LANDSCAPE.md","outputs/LANDSCAPE.json"], "end_time": "2026-05-12T00:08:00+08:00", "paper_count": 35, "gap_count": 12, "theme_count": 6},
+    "phase_2_idea_gen": {"status": "completed", "output": ["outputs/CRITICAL_ANALYSIS.md","outputs/IDEAS_RAW.md","outputs/IDEAS_FILTERED.md"], "end_time": "2026-05-12T00:35:00+08:00", "raw_count": 11, "filtered_count": 6, "thread_id": "019e17c2-d657-7c51-9a97-a817899d3399", "top_idea": "IDEA-01 AttribRL", "plan_b": "IDEA-02 DiscUseBench"},
+    "phase_3_screen": {"status": "completed", "output": ["outputs/SCREENING_REPORT.md","outputs/SCREENING_RANKED.md"], "end_time": "2026-05-12T01:10:00+08:00", "screened_count": 3, "composite_ranking": [{"idea":"IDEA-02 DiscUseBench","score":6.79},{"idea":"IDEA-05 TrajFaith","score":6.71},{"idea":"IDEA-01 AttribRL","score":6.54}], "strategic_ranking": ["IDEA-01 AttribRL","IDEA-02 DiscUseBench","IDEA-05 TrajFaith"], "refine_targets": ["IDEA-01 AttribRL","IDEA-02 DiscUseBench"], "new_priors_discovered": ["CST arXiv:2602.20710","AgenTracer OpenReview l05DseqvuD","AgentSHAP OpenReview zSKpJF2lTU","DFAH arXiv:2601.15322"]},
+    "phase_4_refine": {"status": "completed", "output": ["refine-logs/FINAL_PROPOSAL.md (AttribRL)","refine-logs/FINAL_PROPOSAL_DiscUseBench.md","refine-logs/REVIEW_SUMMARY.md","refine-logs/REFINEMENT_REPORT.md","refine-logs/score-history.md"], "end_time": "2026-05-12T01:55:00+08:00", "attribrl_score": 7.62, "attribrl_verdict": "REVISE", "attribrl_dialogue_turns": 3, "attribrl_thread": "019e17d4-3da8-7633-97d7-624fdcc569cd", "discusebench_score": 6.65, "discusebench_post_simplification_estimate": 7.2, "discusebench_verdict": "REVISE", "discusebench_thread": "019e17e5-82b1-7951-85a8-98770be22530"},
+    "phase_5_final_report": {"status": "completed", "output": ["outputs/IDEA_DISCOVERY_REPORT.md"], "end_time": "2026-05-12T02:05:00+08:00"}
+  },
+  "current_phase": "complete",
+  "end_time": "2026-05-12T02:05:00+08:00"
+}
